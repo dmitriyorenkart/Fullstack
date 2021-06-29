@@ -1,5 +1,6 @@
 ﻿using Fullstack.Models;
 using Fullstack.Service.Interface;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace Fullstack.Service
             _context = context;
         }
 
-
+        [EnableCors]
         public async Task<IEnumerable<User>> GetUsers()
         {
             return await _context.Users.ToListAsync();

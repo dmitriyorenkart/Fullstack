@@ -96,7 +96,7 @@ const tableIcons = {
 };
 
 const api = axios.create({
-    baseURL: 'https://localhost:44312/Users/'
+    baseURL: 'http://18.221.234.152/Users/'
 })
 
 
