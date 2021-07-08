@@ -2,12 +2,7 @@
     text-align: center;
 }
 
-body * {
-    font-family: Ubuntu !important;
-    font-style: normal !important;
-    color: #5D6D97 !important;
-    font-size: 14px;
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

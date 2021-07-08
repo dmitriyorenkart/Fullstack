@@ -10,14 +10,17 @@ namespace Fullstack.Context
     public class AppContext : DbContext
     {
         
-            public DbSet<User> Users { get; set; }
+            public DbSet<ManageTask> ManageTasks { get; set; }
         
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseNpgsql(
-                    @"Host=virmagic.cwypp0fp9xxt.us-east-2.rds.amazonaws.com;Database=virmagic;Username=virmagic;Password=iksqdn94");
-            }
-        
+                          @"Host=localhost;Database=Fullstack;Username=postgres;Password=iksqdn94"
+                    
+);
+            //@"Host=virmagic.cwypp0fp9xxt.us-east-2.rds.amazonaws.com;Database=virmagic;Username=virmagic;Password=iksqdn94"
+        }
+
     }
 }

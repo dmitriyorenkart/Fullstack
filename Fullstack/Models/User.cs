@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace Fullstack.Models
 {
-    public class User
+    public class ManageTask
     {
         [Key]
         [Required(ErrorMessage = "Не указан ID")]
-        [Range(1, 1000000, ErrorMessage = "Недопустимый ID")]
-        public int UserID { get; set; }
+        public int ID { get; set; }
+        [Column(TypeName = "varchar(50)")]
+        public string Name { get; set; }
+      
+        public DateTime Date_Start { get; set; }
 
-        [Column(TypeName = "date")]
-        [Required(ErrorMessage = "Не указана Дата регистрации")]
-        public DateTime Date_Registration { get; set; }
-        [Column(TypeName = "date")]
-        [Required(ErrorMessage = "Не указана Дата последней активности")]
-        public DateTime Date_LastActivity { get; set; }
+        public DateTime Date_Finish { get; set; }
+        [Column(TypeName = "varchar(10)")]
+        public string Status { get; set; }
+        [Column(TypeName = "varchar(200)")]
+        public string Task { get; set; }
 
     }
 }
