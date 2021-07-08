@@ -49,9 +49,9 @@ const tableIcons = {
 
 
 const api = axios.create({
-    baseURL: 'https://localhost:44312/Tasks/'
+    baseURL: 'https://18.221.234.152/Tasks/'
 })
-//18.221.234.152/Tasks/
+
 
 
 
