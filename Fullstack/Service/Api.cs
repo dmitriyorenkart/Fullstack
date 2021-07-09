@@ -28,7 +28,12 @@ namespace Fullstack.Service
         [EnableCors]
         public async Task<IEnumerable<ManageTask>> GetExpiringTasks()
         {
-            return await _context.ManageTasks.Where(p =>  p.Date_Finish < p.Date_Start.AddHours(2) ).ToListAsync() ;
+           
+            
+            return  from t in await _context.ManageTasks.ToListAsync() 
+                   where DateTime.Now > t.Date_Finish.AddHours(-2) && DateTime.Now < t.Date_Finish
+                   orderby t 
+                   select t; 
         }
 
     }

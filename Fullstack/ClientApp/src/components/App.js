@@ -49,10 +49,10 @@ const tableIcons = {
 
 
 const api = axios.create({
-    baseURL: 'https://18.221.234.152/Tasks/'
+    baseURL: 'http://18.221.234.152/Tasks/'
 })
-
-
+//18.221.234.152/Tasks/
+//localhost:44312/Tasks/
 
 
 function App() {

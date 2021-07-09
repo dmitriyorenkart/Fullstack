@@ -30,11 +30,13 @@ namespace Fullstack.Controllers
 
         public async Task<JsonResult> GetTasks()
         {
+          
             return new JsonResult(await _Api.GetTasks());
         }
         [HttpPost("GetExpiringTasks")]
         public async Task<JsonResult> GetExpiringTasks()
         {
+           
             return new JsonResult(await _Api.GetExpiringTasks());
         }
 

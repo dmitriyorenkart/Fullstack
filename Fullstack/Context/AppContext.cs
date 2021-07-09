@@ -15,12 +15,13 @@ namespace Fullstack.Context
 
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                optionsBuilder.UseNpgsql(
-                          @"Host=virmagic.cwypp0fp9xxt.us-east-2.rds.amazonaws.com;Database=virmagic;Username=virmagic;Password=iksqdn94"
-                          
-
+            optionsBuilder.UseNpgsql(
+                      @"Host=virmagic.cwypp0fp9xxt.us-east-2.rds.amazonaws.com;Database=virmagic;Username=virmagic;Password=iksqdn94"
 );
+            optionsBuilder.LogTo(System.Console.WriteLine);
 
+            
+            //  @"Host=virmagic.cwypp0fp9xxt.us-east-2.rds.amazonaws.com;Database=virmagic;Username=virmagic;Password=iksqdn94"
         }
 
     }
